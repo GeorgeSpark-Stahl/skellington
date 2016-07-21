@@ -15,6 +15,10 @@ module.exports = (config) => {
     debug: config.debug
   };
 
+  if (config.json_file_store) {
+    slackbotConfig.json_file_store = config.json_file_store;
+  }
+  
   if (config.storage) {
     slackbotConfig.storage = config.storage;
   }
