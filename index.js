@@ -23,6 +23,10 @@ module.exports = (config) => {
     slackbotConfig.storage = config.storage;
   }
 
+  if (config.webserver) {
+    slackbotConfig.webserver = config.webserver
+  }
+
   let server;
   let controller = Botkit.slackbot(slackbotConfig);
   let bot = controller.spawn({
